@@ -1,4 +1,6 @@
-const { db } = require('@vercel/postgres');
+import prisma from '@/db.js';
+
+
 const {
   invoices,
   customers,
