@@ -3,6 +3,8 @@ import { CalendarIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
 import { Revenue } from '@/app/lib/definitions';
 import { fetchRevenue } from '@/app/lib/data';
+import dbConnect from '@/app/lib/dbConnect';
+import User from '@/models/User';
 
 // This component is representational only.
 // For data visualization UI, check out:
@@ -12,6 +14,25 @@ import { fetchRevenue } from '@/app/lib/data';
 
 export default async function RevenueChart() { // Make component async, remove the props
   const revenue = await fetchRevenue(); // Fetch data inside the component
+
+  // await dbConnect();
+  // const userData = {
+  //   name: 'John Doe',
+  //   email: 'john.doe@example.com',
+  //   password: '123456',
+  //   address: '1234 Some St, City, Country',
+  //   phone: '123-456-7890',
+  //   role: ['user'],
+  // };
+
+  // try {
+  //   const user = new User(userData);
+  //   const savedUser = await user.save();
+  //   console.log('User created:', savedUser);
+  // } catch (error) {
+  //   console.error('Error creating user:', error);
+  // }
+
   const chartHeight = 350;
   const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
