@@ -3,11 +3,11 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
+    "start": "next start",
+    "lint": "next lint",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
-    "start": "next start",
-    "seed": "node -r dotenv/config ./scripts/seed.js",
-    "lint": "next lint"
+    "seed": "node scripts/seed.js"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -18,6 +18,7 @@
     "autoprefixer": "10.4.15",
     "bcrypt": "^5.1.1",
     "clsx": "^2.0.0",
+    "mongoose": "^8.3.4",
     "next": "^14.0.2",
     "next-auth": "^5.0.0-beta.17",
     "postcss": "8.4.31",
@@ -29,6 +30,7 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
     "@types/bcrypt": "^5.0.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
@@ -38,8 +40,7 @@
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "9.0.0",
     "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "0.5.4",
-    "prisma": "^5.13.0"
+    "prettier-plugin-tailwindcss": "0.5.4"
   },
   "engines": {
     "node": ">=20.x"
